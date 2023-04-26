@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style_GamingArena.css">
+    <title>SketchSquad</title>
+</head>
+<body>
+    <!--Logo-->
+    <div class="logo">
+        <img src="./images/logo1.png" alt="" class="logoimg">
+    </div>
+
+
+    <!--Canvas and Chat-->
+    <div class="container">
+        <div class="canvas1">
+            <section class="tools-board">
+                <div class="row">
+                  <label class="title">Shapes</label>
+                  <ul class="options">
+                    <li class="option tool" id="rectangle">
+                      <img src="./images/square.png" alt="">
+                      <span>Rectangle</span>
+                    </li>
+                    <li class="option tool" id="circle">
+                      <img src="./images/circle.png" alt="">
+                      <span>Circle</span>
+                    </li>
+                    <li class="option tool" id="triangle">
+                      <img src="./images/triangle.png" alt="">
+                      <span>Triangle</span>
+                    </li>
+                    <li class="option tool">
+                      <input type="checkbox" id="fill-color">
+                      <label class="fcl" for="fill-color">Fill color</label>
+                    </li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <label class="title">Options</label>
+                  <ul class="options">
+                    <li class="option active tool" id="brush">
+                      <img src="./images/pen.png" alt="">
+                      <span>Brush</span>
+                    </li>
+                    <li class="option tool" id="eraser">
+                      <img src="./images/eraser.png" alt="">
+                      <span>Eraser</span>
+                    </li>
+                    <li class="option">
+                      <input type="range" id="size-slider" min="1" max="30" value="5">
+                    </li>
+                  </ul>
+                </div>
+                <div class="row colors">
+                  <label class="title">Colors</label>
+                  <ul class="options">
+                    <li class="option"></li>
+                    <li class="option selected"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <input type="color" id="color-picker" value="#FFFFFF">  
+                  </ul>
+                </div>
+                <div class="row buttons">
+                  <button class="clear-canvas"><img src="./images/clear.png" alt=""></button>
+                  <button class="save-img"><img src="./images/save.png" alt=""></button>
+                </div>
+            </section></section>
+              <section class="draw">
+                <div class="e1">
+                  <div class="popup" id="popup-1">
+                    <div class="overlay"></div>
+                    <div class="content">
+                      <div class="close-btn" onclick="togglePopup()"><img src="./images/clear.png" alt=""></div>
+                      <h1 class="word">-</h1>
+                      <div class="next-done">
+                        <button class="next"><img src="./images/next.png" alt=""></button>
+                        <button class="done"><img src="./images/done.png" alt=""></button>
+                      </div>
+                    </div>
+                  </div>
+                  <button onclick="togglePopup()" class="chooseword" id="chooseword">Choose word</button>
+                  <h1 class="chosen"></h1>
+                  <div class="timer">
+                    <span id="timer">00:00</span>
+                  </div>
+                </div>
+                <div class="drawing-board">
+                  <canvas id="canvas"></canvas>
+                </div>
+              </section>  
+
+        </div>
+   <div class="chat">
+        <section class="chat__section">
+          <div class="brand">
+              <h1>ChatRoom</h1>
+          </div>
+          <div class="message__area"></div>
+          <div class="textarea">
+              <textarea id="textarea" cols="30" rows="1" placeholder="Write a message..."></textarea>
+          </div>
+      </section>
+    </div>
+    <!--Scores-->
+     <div class="scores">
+      
+        <div class="players">
+          <div class="header">
+            <p>PLAYERS</p>
+          </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://kit.fontawesome.com/16bbfbc590.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.1/socket.io.js"></script>
+    <script type="javascript" src="./index.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
