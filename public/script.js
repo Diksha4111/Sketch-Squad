@@ -41,7 +41,7 @@ window.onmousemove = (e) => {
     ctx.stroke();
   }
 };
-/*const canvas = document.querySelector("canvas"),
+
 toolBtns = document.querySelectorAll(".tool"),
 fillColor = document.querySelector("#fill-color"),
 sizeSlider = document.querySelector("#size-slider"),
